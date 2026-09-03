@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" ontent="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Data type1 - Different type of data
+
+        // 1. String - "Anything under quoter" or 'text"
+        let email = "abc@gmail.com"
+        let city = "mumbai"
+
+        console.log(typeof(city))
+
+        // 2. Number - +ve , -ve , decimal
+        let age = 23
+        let temp = -2
+        let price = 99.99
+
+        //In Build Methods
+        console.log(typeof(age))
+        console.log(typeof(temp))
+        console.log(typeof(price))
+
+        //3. Boolean - true or false
+
+        let loginStatus = false
+
+        let NetflixSub = true
+
+        console.log(typeof(loginStatus))
+        console.log(typeof(NetflixSub))
+
+        //4 . Undefined - when value is not assigned
+
+        let score
+        console.log(typeof(score))
+
+        //5. Null - Intentionally empty value
+
+        let discount = null // it shows object due to bug in js
+        console.log(typeof(discount))
+
+        // Data Type 2: Multiple data 
+
+        //1. Array - Store Multiple data and in only JS it can also store data of different datatype
+        //symbol - [] 
+        //Rule - Index no starts with 0
+
+        let students = ["Sathya" , "Thaha" , "Jhon" , 1212 , true]
+
+        console.log(students)
+        console.log(students[2]) //Jhon
+        console.log(students[3]) // number
+        console.log(students[7]) // undefined
+
+        //2. Object - collection of prop(Data
+        //Symbol - { }
+
+        const employee = {
+            name : "abc",
+            email : "abc@gmail.com",
+            loginStatus : false,
+        }
+        
+        console.log(employee.loginStatus)
+        console.log(employee.email)
+
+
+
+    </script>
+</body>
+</html>
