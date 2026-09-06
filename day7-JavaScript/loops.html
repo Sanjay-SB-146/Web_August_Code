@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. for(start; end/condition; increment/decrement) - when start and end known
+        for(let i = 1; i <= 10; i++){
+            console.log("The value of i ",i)
+        }
+
+        for(let i = 10; i >= 1; i--){
+            console.log("The value of i ",i)
+        }
+
+        //2. While loop - when you dont know start and end
+
+        let count = 1
+        while(count <= 5){
+            console.log("Login Attempt ",count)
+            count++
+        }
+
+        //3. Do while loop - it will run the code atleast once
+        let number = 7
+        do{
+            console.log("Good Evening")
+        }while(number < 5)
+
+        // Array - usefor loop for accessing data of array
+        const fruits = ["mango","orange","kiwi"]
+
+        for(let k = 0; k <= fruits.length-1; k++){
+            console.log("The Fruit is ",fruits[k])
+        }
+    </script>
+</body>
+</html>
