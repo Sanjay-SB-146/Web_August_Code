@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // helps us to to do specific tasks 
+
+        function Greet(){
+            console.log("Good Evening user")
+        }
+        Greet()
+
+        // Function with parameters
+        
+        function greeting(name){
+            console.log("Good Evening " + name + " , Welcome back")
+        }
+        greeting("Sanjay")
+        greeting("Ashika")
+
+        // function with return type
+
+        function TotalBill(price,quantity){
+            return price*quantity
+        }
+
+        let result = TotalBill(100,2)
+        console.log(result)
+
+        // Arrow function
+
+        let abc = ()=>{
+            console.log("Hello Guys I am Arrow function")
+        }
+
+        abc()
+    </script>
+</body>
+</html>
