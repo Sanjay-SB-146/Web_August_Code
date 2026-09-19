@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myp">Good Morning User</p>
+
+    <button id="btn">Login</button>
+
+    <div id="mydiv">
+        This is my Div Container
+    </div>
+
+    <p id="abc">This ia old DULL paragraph</p>
+
+    <script>
+        //1. Change the content
+       const paragTag = document.getElementById("myp")
+       console.log(paragTag.textContent)
+
+       paragTag.textContent = "Welcome Back User"
+
+       const btnn = document.getElementById("btn")
+
+       btnn.textContent = "Logout"
+
+       //2. Update the tag - innerHTML
+       const container = document.getElementById("mydiv")
+       //update with single html tag
+       container.innerHTML = "<h2>This is now Heading </h2>"
+
+       // multiple html tag update
+       container.innerHTML = `
+       <h2> Hello Guys </h2>
+       <button> Greet </button>
+       <p> This is a paragraph </p>
+       <img src="https://images.pexels.com/photos/39486450/pexels-photo-39486450.jpeg" height=350 width=300>
+       `
+
+       //3. change the CSS - .style.cssProperty
+       const p = document.getElementById("abc")
+       p.style.color = "red"
+       p.style.backgroundColor = "black"
+       p.style.textAlign = "center"
+       p.textContent ="This is new Style"
+    </script>
+</body>
+</html>

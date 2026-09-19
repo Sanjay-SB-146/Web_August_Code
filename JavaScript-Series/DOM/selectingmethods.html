@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myp">Hello guys Welcome to JS DOM</p>
+
+    <div class="box">This is Div with 0 Balls</div>
+    <div class="box">This is Div with 1 Balls</div>
+
+    <p>This is a second paragraph</p>
+
+    <div class="abc" id="xyz">Good Morning</div>
+    <div class="abc">Good night</div>
+
+    <script>
+        // Selecting Method - Different ways to select HTML Tag
+
+        //1. Target Single orIndividual HTML Tag - using ID
+
+       const paragraphTag = document.getElementById("myp") //paragraph tag is selected 
+       console.log(paragraphTag)
+
+       //2. Select by class name
+       const container = document.getElementsByClassName("box")
+       console.log(container)
+       console.log(container[1])
+
+       //3. Tagname (we never use this)
+       const para = document.getElementsByTagName("p")
+       console.log(para)
+       console.log(para[0])
+
+       //4. querySelector() -- it follows  CSS selector rule : #id , .class, Tagname
+         //it will only select 1 st element/tag
+       const box = document.querySelector(".abc")
+       console.log(box)
+
+       //5. queryselectorAll() -- all elements 
+       const boxes = document.querySelectorAll(".abc")
+       console.log(boxes)
+       console.log(boxes[1])
+    </script>
+</body>
+</html>
