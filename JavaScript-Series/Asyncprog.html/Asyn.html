@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // make coffee - task 10 sec
+        function Coffee(){
+            console.log("Boil water - 5 sec")
+
+            setTimeout(()=>{
+                console.log("Step 2 : water is read")
+            },5000) // 1000 - 1 sec
+
+            console.log("Step 3 : doing other task")
+        }
+        Coffee()
+
+        function Greeting(){
+            console.log("Hello Good evening")
+        }
+        Greeting()
+    </script>
+</body>
+</html>

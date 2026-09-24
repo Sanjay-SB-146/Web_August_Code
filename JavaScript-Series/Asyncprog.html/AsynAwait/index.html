@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #movie {
+            margin: 30px auto;
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        #movie img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <script>
+       async function getMovie(movieName){
+        let url =  `http://www.omdbapi.com/?t=${movieName}&apikey=ed5f282d`
+
+        try{
+            //Getting data from api
+            let response = await fetch(url)
+            let data =  await response.json()
+            console.log(data.Title)
+            console.log(data.Year)
+            console.log(data.Plot)
+            console.log(data.Poster)
+            console.log(data)
+
+            
+
+        }catch(error){
+            console.log("Error Fetching Data",error)
+        }
+        
+
+       }
+       getMovie("Interstellar")
+       function extraTask(){
+          console.log("Hello everyone")
+       }
+      extraTask()
+    </script>-->
+    <h1>Movie Search</h1>
+
+    <input type="text" id="movieName" placeholder="Enter movie name">
+
+    <button onclick="searchMovie()">Search</button>
+
+    <!-- DOM output -->
+    <div id="movie"></div>
+
+
+    <script>
+
+        async function searchMovie() {
+
+            // Get value from input using DOM
+            let movieName = document.getElementById("movieName").value;
+
+            let url =
+                `https://www.omdbapi.com/?t=${movieName}&apikey=ed5f282d`;
+
+            try {
+
+                // Get data from API
+                let response = await fetch(url);
+
+                let data = await response.json();
+
+                console.log(data);
+
+                // Get webpage element
+                let movie = document.getElementById("movie");
+
+                // Display data on webpage using DOM
+                movie.innerHTML = `
+                    <h2>${data.Title}</h2>
+
+                    <img src="${data.Poster}" alt="${data.Title}">
+
+                    <p><b>Year:</b> ${data.Year}</p>
+
+                    <p><b>Genre:</b> ${data.Genre}</p>
+
+                    <p><b>Director:</b> ${data.Director}</p>
+
+                    <p><b>Actors:</b> ${data.Actors}</p>
+
+                    <p><b>Plot:</b> ${data.Plot}</p>
+
+                    <p><b>IMDB Rating:</b> ${data.imdbRating}</p>
+                `;
+
+            }
+            catch(error) {
+
+                console.log("Error Fetching Data", error);
+
+                document.getElementById("movie").innerHTML =
+                    "<h3>Something went wrong!</h3>";
+            }
+        }
+
+    </script>
+</body>
+</html>
