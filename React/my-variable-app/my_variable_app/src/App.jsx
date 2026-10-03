@@ -75,12 +75,15 @@
 
 import React from "react";
 import {useState} from "react";
+import Addbtn from "./AddCart"
 
 function App(){
   const [login, setLogin] = useState(false)
   return(
     <div>
-      <button onClick={()=> setLogin(!login)}>{login ? "LogOut" : "LogIn"}</button> 
+      <button onClick={()=> setLogin(!login)}>{login ? "LogOut" : "LogIn"}</button>
+      <br></br> <br></br>
+      <Button />
     </div>
   )
 }
